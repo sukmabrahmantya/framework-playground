@@ -19,6 +19,8 @@ const CodeBlock = ({
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const initial = `<pre><code>૮₍ ˃̵ ֊ ˂̵  ₎ა</code></pre>`
+
   return (
     <div className="relative bg-[#0d1117] text-white rounded-md overflow-hidden font-mono text-sm leading-6 border border-neutral-800 w-full">
       <button
@@ -29,7 +31,7 @@ const CodeBlock = ({
       </button>
       <div
         className="overflow-x-auto"
-        dangerouslySetInnerHTML={{ __html: html }}
+        dangerouslySetInnerHTML={{ __html: html || initial }}
       />
     </div>
   )
